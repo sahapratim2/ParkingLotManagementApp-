@@ -15,8 +15,8 @@
   - ADO.NET
 
 - **Database:** 
-	SQL Server 2019 or any
-	Run Database Script from Database Folder
+  - SQL Server 2019 or any
+  - Run Database Script from Database Folder
 
 - **Testing:**
   - xUnit
