@@ -64,7 +64,9 @@
 ## Security
 - No Authorization and Authentication implemented (Out of scope).
 
-## Application Layers
+# Application Layers
+
+## 1. ParkingManagementApp 
 
 ### a. Purpose: 
 This layer serves as the entry point of the application, responsible for managing HTTP requests, controllers, views, and routes. It directly interacts with the Application.
