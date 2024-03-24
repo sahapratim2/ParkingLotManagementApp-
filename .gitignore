@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/ParkingManagementApp/FileContentIndex
+/.vs/ParkingManagementApp/DesignTimeBuild
+/.vs
+/bin/Debug/net7.0
+/obj
+/ParkingManagementApp.sln
+/.gitattributes
+/bin

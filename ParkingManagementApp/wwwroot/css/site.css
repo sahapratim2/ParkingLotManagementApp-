@@ -1,0 +1,183 @@
+@import url('d:\maharishi\boj\cipi\cipiparkinglotmanageapp\parkingmanagementapp\views\shared\_layout.cshtml.css');
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+:root {
+    --header-footer-height: 50px;
+}
+
+.btn:focus, 
+.btn:active:focus, 
+.btn-link.nav-link:focus, 
+.form-control:focus, 
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.area-container {
+    padding: 20px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.area-container > .row {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#areaLeft {
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#areaRight {
+}
+
+#areaLeft,
+#areaRight {
+    border: 2px solid #808080;
+    padding: 50px;
+    border-radius: 15px;
+    height: calc(calc(100vh - 40px) - calc(var(--header-footer-height) * 2));
+}
+
+.div-gap {
+    margin-top: 10px; 
+}
+
+.button-gap-stats {
+    margin-top: 30px;
+}
+
+.btn-fixed-size {
+    height: 40px;
+    width: 100px;
+}
+
+.table-wrapper {
+    height: calc(100vh - 430px);
+    overflow: auto;
+    margin-bottom: 20px;
+}
+
+.table {
+    border-collapse: collapse;
+}
+
+.table td,
+.table th {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+#tblParkingStats td:first-child {
+    text-align: left;
+}
+
+#tblParkingStats td:last-child {
+    text-align: right;
+}
+
+.text-align-center {
+    text-align: center
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+.margin-auto {
+    margin: 0 auto;
+}
+
+.mr-20px {
+    margin-right: 10px;
+}
+
+.navbar,
+.footer {
+    height: var(--header-footer-height) !important;
+    display: flex;
+    align-items: center;
+    padding: 0 20px !important;
+}
+
+h5 {
+    font-size: 26px
+}
+
+.right-card {
+    padding: 20px;
+    border: thin solid gray;
+    border-radius: 10px;
+}
+
+.card-title {
+    padding: 0;
+    margin: 0;
+}
+
+#totalSpots,
+#hourlyFee,
+#availableSpots {
+    line-height: 1;
+    font-size: 30px;
+    text-align: right;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.modal-content {
+    border-radius: 15px;
+}
+
+.modal-body {
+    padding: 20px 30px;
+}
+
+@media (max-width: 768px) {
+    #areaLeft {
+        margin-bottom: 20px !important;
+    }
+
+    #areaLeft,
+    #areaRight {
+        height: unset !important;
+        min-height: unset !important;
+    }
+
+    .table-wrapper {
+        height: unset;
+    }
+
+    .right-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-height: 768px) {
+    #areaLeft,
+    #areaRight {
+        height: unset !important;
+        min-height: unset !important;
+    }
+}

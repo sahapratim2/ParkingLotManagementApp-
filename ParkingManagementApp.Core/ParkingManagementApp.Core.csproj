@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ParkingManagementApp.Common\ParkingManagementApp.Common.csproj" />
+    <ProjectReference Include="..\ParkingManagementApp.Data\ParkingManagementApp.Data.csproj" />
+    <ProjectReference Include="..\ParkingManagementApp.Model\ParkingManagementApp.Model.csproj" />
+  </ItemGroup>
+
+</Project>

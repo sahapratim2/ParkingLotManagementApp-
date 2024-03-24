@@ -1,0 +1,118 @@
+﻿@model IEnumerable<ParkingManagementApp.Common.DTOs.ParkingLotViewDto>
+
+@await Html.PartialAsync("~/Views/Shared/_SuccessModal.cshtml")
+@await Html.PartialAsync("~/Views/Shared/_AlertModal.cshtml")
+<div class="container-fluid area-container">
+    <div class="row">
+        <div class="col-md-3" id="areaLeft">
+            <h5 class="text-align-center mb-3">Check In/Out</h5>
+            <label for="tagNumber" class="mb-2">Tag Number:</label>
+            <input type="text" id="tagNumber" name="tagNumber" class="form-control" placeholder="Value"/>
+         
+            <div class="text-center mt-3">
+                <button onclick="checkIn()" class="btn btn-secondary btn-fixed-size mr-20px" id="btnCheckIn">In</button>
+                <button onclick="checkOut()" class="btn btn-secondary btn-fixed-size" id="btnCheckOut">Out</button>
+                <p id="error" style="color: red;"></p>
+                <button onclick="showStats()" class="btn btn-secondary btn-fixed-size mt-3" id="btnShowStats">Stats</button>
+            </div>
+        </div>
+        <div class="col-md-8" id="areaRight">
+            <h5 class="text-align-center mb-3">Parking Lot</h5>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="right-card">
+                        <div class="card-title">Total Spots</div>
+                        <div id="totalSpots">@ViewBag.TotalSpots</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="right-card">
+                        <div class="card-title">Available Spots</div>
+                        <div id="availableSpots">@ViewBag.AvailableSpots</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="right-card">
+                        <div class="card-title">Hourly Fee</div>
+                        <div id="hourlyFee">$@ViewBag.HourlyFee</div>
+                    </div>
+                </div>
+            </div>
+            <div class="div-gap mt-4 table-wrapper">
+                <table id="tblParkingLots" class="table text-align-center">
+                    <thead>
+                        <tr>
+                            <th>Tag Number</th>
+                            <th style="display: none;">InDateTime</th>
+                            <th>In</th>
+                            <th>Elapsed Time</th>
+                        </tr>
+                    </thead>
+                        <tbody id="tblParkingLotsBody">
+                        @foreach (var car in Model)
+                        {
+                            <tr>
+                                <td>@car.TagNumber</td>
+                                <td style="display: none;"><span id="checkInDateTime@(car.Id)"></span></td>
+                                <td><span id="checkInTime@(car.Id)"></span></td>
+                                <td><span id="elapsedTime@(car.Id)"></span></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <div id="spotsTakenId" style="display: flex; float:right;" class="font-weight-bold">
+                    <div>Spots Taken:&nbsp;</div>
+                    <div id="spotsTaken">@ViewBag.SpotsTaken</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="statsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel" style="text-align:center" >Parking Stats</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="div-gap">
+                    <table id="tblParkingStats" class="table">
+                    </table>
+                  </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="@Url.Content("~/js/home.js")"></script>
+<script src="@Url.Content("~/js/common.js")"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        var cars = @Html.Raw(Json.Serialize(Model));
+
+        cars.forEach(function (car) {
+
+            const localCheckInTime = convertUTCDateToLocalDate(new Date(car.checkInTime));
+
+            document.getElementById("checkInDateTime" + car.id).textContent = localCheckInTime;
+
+            let checkInTime = localCheckInTime.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+
+            document.getElementById("checkInTime" + car.id).textContent = checkInTime;
+
+            let elapsedTime = calculateElapsedTime(localCheckInTime);
+
+            document.getElementById("elapsedTime" + car.id).textContent = elapsedTime;
+        });
+    });
+</script>
+
+

@@ -1,0 +1,12 @@
+D:\Maharishi\Boj\CIPI\CIPIParkingLotManageApp\ParkingManagementApp.Common\bin\Release\net7.0\ParkingManagementApp.Common.deps.json
+D:\Maharishi\Boj\CIPI\CIPIParkingLotManageApp\ParkingManagementApp.Common\bin\Release\net7.0\ParkingManagementApp.Common.dll
+D:\Maharishi\Boj\CIPI\CIPIParkingLotManageApp\ParkingManagementApp.Common\bin\Release\net7.0\ParkingManagementApp.Common.pdb
+D:\Maharishi\Boj\CIPI\CIPIParkingLotManageApp\ParkingManagementApp.Common\obj\Release\net7.0\ParkingManagementApp.Common.csproj.AssemblyReference.cache
+D:\Maharishi\Boj\CIPI\CIPIParkingLotManageApp\ParkingManagementApp.Common\obj\Release\net7.0\ParkingManagementApp.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Maharishi\Boj\CIPI\CIPIParkingLotManageApp\ParkingManagementApp.Common\obj\Release\net7.0\ParkingManagementApp.Common.AssemblyInfoInputs.cache
+D:\Maharishi\Boj\CIPI\CIPIParkingLotManageApp\ParkingManagementApp.Common\obj\Release\net7.0\ParkingManagementApp.Common.AssemblyInfo.cs
+D:\Maharishi\Boj\CIPI\CIPIParkingLotManageApp\ParkingManagementApp.Common\obj\Release\net7.0\ParkingManagementApp.Common.csproj.CoreCompileInputs.cache
+D:\Maharishi\Boj\CIPI\CIPIParkingLotManageApp\ParkingManagementApp.Common\obj\Release\net7.0\ParkingManagementApp.Common.dll
+D:\Maharishi\Boj\CIPI\CIPIParkingLotManageApp\ParkingManagementApp.Common\obj\Release\net7.0\refint\ParkingManagementApp.Common.dll
+D:\Maharishi\Boj\CIPI\CIPIParkingLotManageApp\ParkingManagementApp.Common\obj\Release\net7.0\ParkingManagementApp.Common.pdb
+D:\Maharishi\Boj\CIPI\CIPIParkingLotManageApp\ParkingManagementApp.Common\obj\Release\net7.0\ref\ParkingManagementApp.Common.dll
